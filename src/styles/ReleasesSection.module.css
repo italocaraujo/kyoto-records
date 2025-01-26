@@ -1,0 +1,66 @@
+.releases {
+
+    margin: 20px auto;
+    max-width: 800px;
+  
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.releases h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #fffaec;
+}
+  
+.titleAlbum {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+  
+/* ======== LISTA DE LANÇAMENTOS ======== */
+.releases ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    color: #fffaec;
+}
+  
+.albumCover {
+    width: 400px;
+    max-width: 100%; /* Garante que a largura não ultrapasse o container */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+/* === Classe adicionada via IntersectionObserver === */
+.fadeInSection {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.listenLink {
+    background-color: #FFFAEC;
+    color: #212121;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 45px;
+    border-radius: 55px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.listenLink:hover {
+    background-color: #cfcbbe;
+    transform: scale(1.05); /* Efeito de aumento */
+}

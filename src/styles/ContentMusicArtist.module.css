@@ -1,0 +1,65 @@
+.ouvirLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.musicTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.listenLink {
+    background-color: #FFFAEC;
+    color: #212121;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 45px;
+    border-radius: 55px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.listenLink:hover {
+    background-color: #cfcbbe;
+    transform: scale(1.05); /* Efeito de aumento */
+}
+
+.coverImage {
+    max-width: 100%; /* Garante que a largura não ultrapasse o container */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Opcional: bordas arredondadas */
+    transition: transform 0.3s ease; /* Efeito ao redimensionar */
+}
+
+/* Responsividade adicional para telas menores */
+@media (max-width: 768px) {
+
+    .musicTitle {
+        font-size: 1rem; /* Ajusta o tamanho do título */
+    }
+
+    .listenLink {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .musicTitle {
+        font-size: 0.9rem;
+    }
+
+    .listenLink {
+        font-size: 0.8rem;
+    }
+}

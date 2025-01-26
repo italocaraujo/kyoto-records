@@ -1,0 +1,95 @@
+.navContainer {
+    position: relative;
+    z-index: 50;
+    background-color: #b6b1a3b0;
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    left: 20%;
+    padding: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #212121;
+  }
+  
+  .menuIcon {
+    cursor: pointer;
+    display: none; /* Oculto no desktop */
+  }
+  
+  .icon {
+    font-size: 1.5rem;
+    color: #212121;
+  }
+  
+  .cardContent {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 16px;
+    transition: max-height 0.3s ease-in-out;
+    max-height: none; /* Sempre visível no desktop */
+    overflow: hidden;
+  }
+  
+  /* Quando o menu está aberto */
+  .cardContent.open {
+    max-height: 200px; /* Apenas usado no responsivo */
+  }
+  
+  .link {
+    color: #212121;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+  
+  .link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Espessura da linha */
+    background-color: currentColor; /* Usa a cor do texto */
+    transition: width 0.3s ease; /* Tempo e tipo de transição */
+  }
+  
+  .link:hover::after {
+    width: 100%;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .navContainer {
+      width: 90%;
+      left: 5%;
+    }
+  
+    .menuIcon {
+      display: block; /* Exibe o ícone de menu no responsivo */
+    }
+  
+    .cardContent {
+      flex-direction: column; /* Links empilhados no responsivo */
+      gap: 27px;
+      max-height: 0; /* Oculto por padrão */
+    }
+  
+    .cardContent.open {
+      max-height: 200px; /* Altura para exibir os links */
+    }
+  }
+  

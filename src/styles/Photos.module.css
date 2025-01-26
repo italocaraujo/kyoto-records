@@ -1,0 +1,92 @@
+.sectionPhotos {
+  margin-top: 100px;
+}
+
+.galleryContainer {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Aumentei o tamanho mínimo */
+  gap: 16px;
+}
+
+.galleryItem {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  width: 100%; /* Ajusta o tamanho do container */
+  height: 250px; /* Define uma altura fixa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.galleryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem preencher o espaço uniformemente */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.galleryItem:hover .galleryImage {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.modalImage {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  color: #ccc;
+}
+
+.prevButton,
+.nextButton {
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+  margin: 0 20px;
+}
+
+.prevButton:hover,
+.nextButton:hover {
+  color: #ccc;
+}

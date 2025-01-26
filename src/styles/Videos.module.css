@@ -1,0 +1,28 @@
+.sectionVideos {
+    margin-top: 100px;
+  }
+  
+  .galleryContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .galleryItem {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Aspect ratio 16:9 */
+  }
+  
+  .videoIframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  

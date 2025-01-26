@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+/* ====== Container geral do Header ====== */
+.headerKyoto {
+  background-color: #fffaec; /* Fundo claro */
+  color: #212121;
+  width: 100%;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  padding-right: 3%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== Container flex que agrupa:
+   - Nav da esquerda
+   - Logotipo ao centro
+   - Nav da direita 
+   para DESKTOP ====== */
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1400px; /* Ajuste conforme necessidade */
+  padding: 34px 20px; /* Espaçamento top-bottom e laterais */
+}
+
+/* ====== Nav da esquerda e direita (desktop) ====== */
+.leftNav,
+.rightNav {
+  display: flex;
+  gap: 175px; /* Espaço entre links */
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Remove a decoração padrão e controla o hover animado */
+.leftNav a,
+.rightNav a,
+.sideNav a {
+  color: #212121;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+/* Pseudo-elemento que fará o sublinhado animado */
+.leftNav a::after,
+.rightNav a::after,
+.sideNav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px; /* espessura da linha */
+  background-color: currentColor; /* usa a cor do texto */
+  transition: width 0.3s ease;    /* tempo e tipo de transição */
+}
+
+/* Ao passar o mouse, expande a linha de 0% para 100% */
+.leftNav a:hover::after,
+.rightNav a:hover::after,
+.sideNav a:hover::after {
+  width: 100%;
+}
+
+/* ====== Logotipo/Marca ao centro (desktop) ====== */
+.kyotoHeaderTitle {
+  background-color: #212121; /* fundo preto */
+  color: #fffaec;            /* texto claro */
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* ====== Ícone de menu (hambúrguer) - visível apenas no mobile ====== */
+.hamburger {
+  display: none; /* some no desktop */
+  position: absolute;
+  top: 34px;
+  right: 20px;
+  cursor: pointer;
+}
+
+/* ====== Overlay escuro ao abrir o menu lateral ====== */
+.overlay {
+  display: none; /* Oculto inicialmente */
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 500;
+  opacity: 0; /* Começa transparente */
+  transition: opacity 0.3s ease; /* Transição suave */
+}
+
+.overlay.active {
+  display: block; /* Visível */
+  opacity: 1; /* Fundo escurecido */
+}
+
+/* ====== Menu lateral (mobile) ====== */
+.sideNav {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Inicialmente fora da tela */
+  background-color: #fffaec;
+  width: 250px;
+  height: 100%;
+  padding: 80px 20px;
+  z-index: 1000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex; /* Layout flexível */
+  flex-direction: column; /* Links em coluna */
+  justify-content: flex-start; /* Começa no topo */
+  align-items: flex-start; /* Alinha os links à esquerda */
+  gap: 20px; /* Espaço entre os links */
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease; /* Transição suave */
+}
+
+.sideNav.menuOpen {
+  right: 0; /* Mostra a sidebar */
+}
+
+.sideNav a {
+  color: #212121;
+  text-decoration: none;
+  display: block; /* Garante que os links ocupem toda a largura */
+  padding: 10px 0; /* Espaçamento vertical nos links */
+}
+
+/* ====== Botão de fechar do menu lateral (mobile) ====== */
+.closeButton {
+  display: none; /* some no desktop */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 2rem;
+  z-index: 1001;
+}
+
+.closeButton svg {
+  fill: #212121;
+}
+
+/* ====== Quando abrir o menu lateral ====== */
+.menuOpen {
+  display: flex;
+}
+
+/* ====== Responsividade ====== */
+@media (max-width: 1000px) {
+  /* Some menus desktop no mobile */
+  .leftNav,
+  .rightNav {
+    display: none;
+  }
+
+  /* Mostra o ícone de menu (hambúrguer) */
+  .hamburger {
+    display: block;
+  }
+
+  /* Mostra botão de fechar no menu lateral */
+  .closeButton {
+    display: block;
+  }
+}
+
+@media (max-width: 428px) {
+  .kyotoHeaderTitle {
+    font-size: 1.5rem;
+  }
+
+  .sideNav {
+    padding: 60px 15px; /* Ajusta padding para dispositivos pequenos */
+    font-size: 1.2rem; /* Ajusta tamanho do texto */
+    gap: 15px; /* Reduz o espaço entre links */
+  }
+
+  .sideNav a {
+    padding: 8px 0; /* Ajusta o espaçamento vertical */
+  }
+}
