@@ -1,5 +1,5 @@
 .navContainer {
-    position: relative;
+    position: absolute;
     z-index: 50;
     background-color: #b6b1a3b0;
     border-radius: 0 0 25px 25px;
@@ -8,6 +8,7 @@
     left: 20%;
     padding: 16px;
     transition: all 0.3s ease;
+    
   }
   
   .header {
