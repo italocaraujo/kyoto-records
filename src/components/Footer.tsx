@@ -8,7 +8,7 @@ const Footer = () => {
         <a href="mailto:comercialkyotorecords@gmail.com" className={styles.link}>
           comercialkyotorecords@gmail.com
         </a>
-        <a href="https://www.instagram.com/kyotorecords" target="_blank" rel="noopener noreferrer" className={styles.link}>
+        <a href="https://www.instagram.com/kyoto.records" target="_blank" rel="noopener noreferrer" className={styles.link}>
           Instagram
         </a>
         <a href="https://www.youtube.com/@kyoto.records" target="_blank" rel="noopener noreferrer" className={styles.link}>

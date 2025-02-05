@@ -114,9 +114,8 @@ export default function ZecaIcaris() {
           </a>
           <p>
             Zeca Icaris é um músico visionário de Recife que mistura soul, R&B e experimentalismo.
-            Inspirado por grandes nomes como Frank Ocean e Steve Lacy, Zeca cria músicas que tocam
-            a alma e exploram sentimentos profundos. Sua jornada musical começou em 2020, em meio
-            à pandemia, como forma de expressão durante um período desafiador.
+            Com uma sonoridade envolvente e letras que exploram sentimentos profundos, Zeca cria músicas que tocam a alma.
+            Sua jornada musical começou em 2020, em meio à pandemia, como forma de expressão durante um período desafiador.
           </p>
         </div>
       </div>
