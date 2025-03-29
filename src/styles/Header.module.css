@@ -11,6 +11,17 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.centerNav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.kyotoLogo {
+  width: 50px;
+  height: 50px;
+}
+
 /* ====== Container flex que agrupa:
    - Nav da esquerda
    - Logotipo ao centro
@@ -26,16 +37,14 @@
 }
 
 /* ====== Nav da esquerda e direita (desktop) ====== */
-.leftNav,
 .rightNav {
   display: flex;
-  gap: 175px; /* Espaço entre links */
+  gap: 100px; /* Espaço entre links */
   font-size: 1.5rem;
   font-weight: 700;
 }
 
 /* Remove a decoração padrão e controla o hover animado */
-.leftNav a,
 .rightNav a,
 .sideNav a {
   color: #212121;
@@ -53,7 +62,7 @@
   left: 0;
   bottom: 0;
   width: 0;
-  height: 2px; /* espessura da linha */
+  height: 3px; /* espessura da linha */
   background-color: currentColor; /* usa a cor do texto */
   transition: width 0.3s ease;    /* tempo e tipo de transição */
 }
@@ -174,6 +183,7 @@
 @media (max-width: 428px) {
   .kyotoHeaderTitle {
     font-size: 1.5rem;
+    padding: 0 10px;
   }
 
   .sideNav {
@@ -184,5 +194,14 @@
 
   .sideNav a {
     padding: 8px 0; /* Ajusta o espaçamento vertical */
+  }
+
+  .centerNav a {
+    gap: 5px;
+  }
+
+  .kyotoLogo {
+    width: 35px;
+    height: 35px;
   }
 }

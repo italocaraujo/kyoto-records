@@ -63,7 +63,7 @@
     left: 0;
     bottom: 0;
     width: 0;
-    height: 2px; /* Espessura da linha */
+    height: 3px; /* Espessura da linha */
     background-color: currentColor; /* Usa a cor do texto */
     transition: width 0.3s ease; /* Tempo e tipo de transição */
   }

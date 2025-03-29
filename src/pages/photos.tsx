@@ -13,10 +13,11 @@ type Photo = {
 const initialPhotos: Photo[] = [
   { id: 1, url: "/assets/images/photo1.jpg" },
   { id: 2, url: "/assets/images/photo2.jpg" },
-  { id: 3, url: "/assets/images/photo3.jpeg" },
+  { id: 3, url: "/assets/images/photo3.jpg" },
   { id: 4, url: "/assets/images/photo4.jpg" },
   { id: 5, url: "/assets/images/photo5.jpg" },
   { id: 6, url: "/assets/images/photo6.jpg" },
+  { id: 7, url: "/assets/images/photo7.jpg" },
 ];
 
 const PhotoGallery: React.FC = () => {

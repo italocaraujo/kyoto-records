@@ -1,14 +1,11 @@
 import { useState } from "react";
 import styles from "@/styles/Header.module.css";
 
-const leftMenuLinks = [
-  { label: "Zeca Icaris", href: "/artistas/zeca" },
+const menuLinks = [
   { label: "Minele", href: "/artistas/minele" },
-];
-
-const rightMenuLinks = [
   { label: "RafaMSL", href: "/artistas/rafamsl" },
   { label: "Nya", href: "/artistas/nya" },
+
 ];
 
 export default function Header() {
@@ -21,23 +18,20 @@ export default function Header() {
     <header className={styles.headerKyoto}>
       {/* Container que organiza o menu em 3 partes (esquerda, centro, direita) */}
       <div className={styles.navContainer}>
-        {/* Menu da esquerda (desktop) */}
-        <nav className={styles.leftNav}>
-          {leftMenuLinks.map(({ label, href }) => (
-            <a key={label} href={href}>
-              {label}
-            </a>
-          ))}
-        </nav>
-
         {/* Logotipo/Marca ao centro */}
-        <div className={styles.kyotoHeaderTitle}>
-          <a href="/">KyotoRecords</a>
+        <div className={styles.centerNav}>
+          <a href="/">
+            <img src="/d-kyoto-cherry.ico" alt="Logotipo Kyoto Records" className={styles.kyotoLogo} />
+            <p className={styles.kyotoHeaderTitle}>
+              KyotoRecords
+            </p>
+            
+          </a>
         </div>
 
         {/* Menu da direita (desktop) */}
         <nav className={styles.rightNav}>
-          {rightMenuLinks.map(({ label, href }) => (
+          {menuLinks.map(({ label, href }) => (
             <a key={label} href={href}>
               {label}
             </a>
@@ -99,7 +93,7 @@ export default function Header() {
         </div>
 
         {/* Todos os links (unidos em uma só lista) */}
-        {[...leftMenuLinks, ...rightMenuLinks].map(({ label, href }) => (
+        {[...menuLinks].map(({ label, href }) => (
           <a key={label} href={href}>
             {label}
           </a>

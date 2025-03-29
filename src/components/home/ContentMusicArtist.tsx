@@ -27,12 +27,6 @@ const ContentMusicArtist = () => {
       date: "Released August 16, 2024",
       url: "https://open.spotify.com/intl-pt/track/5EuvkAU25hURxOky05Z32g?si=519c58c2c6894bdc",
     },
-    {
-      cover: "/assets/covers/zecaParasita.png",
-      music: "Zeca Icaris - Parasita",
-      date: "Released October 16, 2023",
-      url: "https://www.youtube.com/playlist?list=PLFWypV3Onhh5HNVEm_8Syq-y9qXjXAuna",
-    },
   ];
 
   return (
